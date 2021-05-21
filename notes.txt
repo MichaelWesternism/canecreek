@@ -1,0 +1,15 @@
+ID,
+userid,
+created date,
+Part number,
+part name,
+part category, (shocks, seatposts, forks, headsets, cranks)
+part description,
+
+ID
+userid
+rider log notes,
+rider log date
+
+
+add form as pop up with opacity with javascript

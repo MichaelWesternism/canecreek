@@ -40,6 +40,6 @@
   //closes db connection
   mysqli_close($conn);
 
-
+ //echo password_hash('test456', PASSWORD_DEFAULT);
 
 ?>
