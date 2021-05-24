@@ -17,7 +17,9 @@
   </head>
   <body id="login-background">
     <div class="opacity">
-
+      <form class="input-group" method="POST">
+        <button type="submit" name="restore"  class="submit-btn">Restore_DB(DELETE)</button>
+      </form>
       <div class="form-box">
 
         <div class="button-box">

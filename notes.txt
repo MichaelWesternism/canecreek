@@ -12,4 +12,8 @@ rider log notes,
 rider log date
 
 
-add form as pop up with opacity with javascript
+
+**add qr scanner
+**add automatic downloading and backup of sql
+**add form as pop up with opacity with javascript
+**add infinite scrolling on master page

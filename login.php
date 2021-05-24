@@ -5,6 +5,13 @@
   //connect db
   include('config/dbConnect.php');
 
+
+  //RESTORES DATABASE (needs to be deleted)
+  if(isset($_POST['restore'])){
+    include('templates/sqlrestore.php');
+  }
+
+
   //query for login
   $sql = 'SELECT userid, email, password FROM login';
 

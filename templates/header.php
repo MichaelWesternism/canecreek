@@ -32,7 +32,7 @@
   mysqli_free_result($result);
   //END for master.php
 
-  //add part function
+  //ADD PART FUNCTION
   if(isset($_POST['addpart'])){
     $pname = mysqli_real_escape_string($conn, $_POST['pname']);
     $pnumber = mysqli_real_escape_string($conn, $_POST['pnumber']);
@@ -46,7 +46,9 @@
     //save to db and check
     if(mysqli_query($conn, $sql)){
       //success
-      //header redirects to index
+      //BACKS UP DATABASE
+      include('templates/sqlbackup.php');
+      //header redirects to details page
       header('Location: master.php');
     }else{
       //errors
@@ -95,6 +97,8 @@
       //save to db and check
       if(mysqli_query($conn, $sql)){
         //success
+        //BACKS UP DATABASE
+        include('templates/sqlbackup.php');
         //header redirects to index
         header('Location: details.php?id='. $id);
       }else{
