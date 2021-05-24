@@ -14,6 +14,6 @@ rider log date
 
 
 **add qr scanner
-**add automatic downloading and backup of sql
+**add automatic downloading and backup of sql (THIS NEEDS TO BE DELETED OR SECURED BEFORE LAUNCH)
 **add form as pop up with opacity with javascript
 **add infinite scrolling on master page

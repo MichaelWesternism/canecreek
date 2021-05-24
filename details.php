@@ -4,7 +4,7 @@
     header('Location: master.php');
   }
 ?>
-<a style="text-decoration: none;" href="addcomment.php?id=<?php echo $parts['id']?>" id="addbutton" class="input-group" >
+<a style="text-decoration: none;" href="addcomment.php?id=<?php echo htmlspecialchars($parts['id'])?>" id="addbutton" class="input-group" >
   <button type="submit" class="submit-btn">Add Comment</button>
 </a>
 <div id="qrcode">
@@ -15,22 +15,22 @@
 <div class="detailbox" width= 30px;>
 
 
-  <h2><?php echo $parts['userid']; ?></h2>
+  <h2><?php echo htmlspecialchars($parts['userid']) ?></h2>
 
   <h4>Part Name</h4>
-  <p><?php echo $parts['pname']; ?></p>
+  <p><?php echo htmlspecialchars($parts['pname']) ?></p>
 
   <h4>Part Number</h4>
-  <p><?php echo $parts['pnumber']; ?></p>
+  <p><?php echo htmlspecialchars($parts['pnumber']) ?></p>
 
   <h4>Part Category</h4>
-  <p><?php echo $parts['pcategory']; ?></p>
+  <p><?php echo htmlspecialchars($parts['pcategory']) ?></p>
 
   <h4>Part Description</h4>
-  <p><?php echo $parts['pdescription']; ?></p>
+  <p><?php echo htmlspecialchars($parts['pdescription']) ?></p>
 
   <h4>Date/Time</h4>
-  <p><?php echo $parts['ptime']; ?></p>
+  <p><?php echo htmlspecialchars($parts['ptime']) ?></p>
 
 </div>
 
@@ -39,9 +39,9 @@
 <div class="container">
   <?php foreach ($comments as $comment){ ?>
     <div class="commentbox">
-      <h2><?php echo $comment['2'];?></h2>
+      <h2><?php echo htmlspecialchars($comment['2'])?></h2>
       <hr />
-      <p><?php echo $comment['3'];?></p>
+      <p><?php echo htmlspecialchars($comment['3'])?></p>
     </div>
   <?php } ?>
 </div>

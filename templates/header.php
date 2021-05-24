@@ -123,7 +123,7 @@
   <header id="header">
     <h1>
       Welcome
-      <?php echo $_SESSION['userid']; ?>
+      <?php echo htmlspecialchars($_SESSION['userid']) ?>
     </h1>
 
     <a href="master.php">

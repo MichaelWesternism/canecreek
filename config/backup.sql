@@ -7,7 +7,7 @@ CREATE TABLE `comments` (
   `riderlog` varchar(255) NOT NULL,
   `rldate` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO comments VALUES("1","4","Heimdall","it goes ring adingaling a ling maling faling and annoys all my neighbors. 10/10 would buy again.","2021-05-20 15:16:56");
 INSERT INTO comments VALUES("2","4","Maddy","yo maamamasdflkasdfaihsfsaoidhfsadfsdafsadf","2021-05-20 15:29:23");
@@ -29,6 +29,10 @@ INSERT INTO comments VALUES("14","9","Admin","COMMENT BACKUP TEST","2021-05-24 1
 INSERT INTO comments VALUES("15","10","Admin","comment backup test","2021-05-24 10:59:45");
 INSERT INTO comments VALUES("16","1","Admin","backup test","2021-05-24 11:01:43");
 INSERT INTO comments VALUES("17","1","Admin","backup test","2021-05-24 11:01:56");
+INSERT INTO comments VALUES("18","9","Admin","echo $_SERVER[\'SERVER_NAME\']","2021-05-24 13:28:07");
+INSERT INTO comments VALUES("19","9","Admin","<?php echo $_SERVER[\'SERVER_NAME\']; ?>","2021-05-24 13:30:05");
+INSERT INTO comments VALUES("20","9","Admin","<?php echo \"stuff\"; ?>","2021-05-24 13:31:19");
+INSERT INTO comments VALUES("21","5","Admin","This one needs a comment","2021-05-24 13:43:09");
 
 
 
