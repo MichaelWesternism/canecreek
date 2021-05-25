@@ -3,10 +3,54 @@
   if(!isset($_GET['id'])){
     header('Location: master.php');
   }
+
 ?>
-<a style="text-decoration: none;" href="addcomment.php?id=<?php echo htmlspecialchars($parts['id'])?>" id="addbutton" class="input-group" >
+
+<!--EDIT/ARCHIVE PART FORM-->
+<form onclick="editbutton()" id="editbutton" class="input-group" >
+  <button type="submit" class="submit-btn">Edit/Archive</button>
+</form>
+<div class="edit-box">
+  <h2>Edit/Archive</h2>
+  <form name="editpart" class="add-group" method="POST">
+    <input type="text" name="pname" class="input-field" value="<?php echo htmlspecialchars($parts['pname']) ?>" required>
+    <br><br />
+    <input type="text" name="pnumber" class="input-field" value="<?php echo htmlspecialchars($parts['pnumber']) ?>" required>
+    <br /><br />
+    <select name="pcategory" class="input-field">
+      <option value="Shocks">Shocks</option>
+      <option value="Seat Posts">Seat Posts</option>
+      <option value="Forks">Forks</option>
+      <option value="Headsets">Headsets</option>
+      <option value="Cranks">Cranks</option>
+    </select>
+    <br /><br />
+    <textarea class="pdetails" name='pdescription'placeholder="Part Description" required><?php echo htmlspecialchars($parts['pdescription']) ?></textarea>
+    <br><br>
+    <button type="submit" name="editpart" class="submit-btn">Edit Part</button>
+    <br />
+    <button type="submit" name="archivepart" class="submit-btn">Archive Part</button>
+  </form>
+</div>
+
+
+<!--ADD COMMENT FORM-->
+<form onclick="addcommentbtn()" id="addbutton" class="input-group" >
   <button type="submit" class="submit-btn">Add Comment</button>
-</a>
+</form>
+<div class="add-box">
+  <h2>Add Comment</h2>
+  <form id="login" name="addcomment" class="add-group" method="POST">
+    <textarea class="comments" name='riderlog' placeholder="Part Comment" required></textarea>
+    <br><br>
+    <button type="submit" name="addcomment" class="submit-btn">Add Comment</button>
+  </form>
+</div>
+
+
+
+
+
 <div id="qrcode">
   <img  src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chl=localhost/canecreek/details.php?id=<?php echo $_GET['id']?>" />
 </div>

@@ -32,6 +32,24 @@
   mysqli_free_result($result);
   //END for master.php
 
+
+
+  //START for archive.php
+  //query for archive table
+  $sql = 'SELECT * FROM archive';
+
+  //get result
+  $result = mysqli_query($conn, $sql);
+
+  //store result in array
+  $archive = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+  //clears result
+  mysqli_free_result($result);
+  //END for archive.php
+
+
+
   //ADD PART FUNCTION
   if(isset($_POST['addpart'])){
     $pname = mysqli_real_escape_string($conn, $_POST['pname']);
@@ -62,15 +80,17 @@
   if(isset($_GET['id'])){
     $id = mysqli_real_escape_string($conn, $_GET['id']);
 
-    // make sql from single row using id column
+    // make sql from single row using id column FOR DETAILS
     $sql = "SELECT * FROM parts WHERE id = $id";
-
-    // get the query result
     $result = mysqli_query($conn, $sql);
-
-    //fetch result in array
     $parts = mysqli_fetch_assoc($result);
+    mysqli_free_result($result);
+    //END unique id row retrieval from parts
 
+    // make sql from single row using id column FOR ARCHIVE
+    $sql = "SELECT * FROM archive WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $archive = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
     //END unique id row retrieval from parts
 
@@ -108,7 +128,48 @@
     }
   }
 
+//EDIT OR ARCHIVE FUNCTION
+if(isset($_POST['archivepart'])){
+  //moves part to archive
+  $sql = "INSERT INTO archive(id, userid, pnumber, pname, pcategory, pdescription)
+          VALUES('$parts[id]', '$parts[userid]', '$parts[pnumber]', '$parts[pname]', '$parts[pcategory]', '$parts[pdescription]')";
 
+  if (mysqli_query($conn, $sql)){
+    //deletes part
+    $sql = "DELETE FROM parts WHERE id = '$id'";
+    if (mysqli_query($conn, $sql)){
+      header('Location: master.php');
+    }else {
+      //failure
+      echo 'query error: ' . mysqli_error($conn);
+    }
+  }else{
+    //failure
+    echo 'query error: ' . mysqli_error($conn);
+  }
+}
+if(isset($_POST['editpart'])){
+  $pname = mysqli_real_escape_string($conn, $_POST['pname']);
+  $pnumber = mysqli_real_escape_string($conn, $_POST['pnumber']);
+  $pcategory = mysqli_real_escape_string($conn, $_POST['pcategory']);
+  $pdescription = mysqli_real_escape_string($conn, $_POST['pdescription']);
+  $userid = $_SESSION['userid'];
+
+  $sql = "UPDATE parts SET pname='$pname', pnumber='$pnumber', pcategory='$pcategory', pdescription='$pdescription', userid='$userid'
+          WHERE id= '$id'";
+
+  //save to db and check
+  if(mysqli_query($conn, $sql)){
+    //success
+    //BACKS UP DATABASE
+    include('templates/sqlbackup.php');
+    //header redirects to details page
+    header('Location: details.php?id='. $id);
+  }else{
+    //errors
+    echo 'query error: ' . mysqli_error($conn);
+  }
+}
 
 
   //closes db connection
