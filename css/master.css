@@ -90,6 +90,9 @@ td {
 tbody td {
   text-align: center;
 }
+#qrbox{
+  display: none;
+}
 #qrcode {
   border-radius: 50px;
   overflow: hidden;
@@ -102,11 +105,6 @@ tbody td {
   position: absolute;
   top: 21px;
   right: 7px;
-}
-#addbutton{
-  position: absolute;
-  top: 80px;
-  left: 7px;
 }
 #editbutton{
   position: absolute;

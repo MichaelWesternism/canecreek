@@ -1,15 +1,20 @@
 <?php
   include ('templates/header.php')
 ?>
+
 <form action="archive.php" id="editbutton" class="input-group" >
   <button type="submit" class="submit-btn">Archive Table</button>
 </form>
+
+
+
 <!--ADD PART FORM-->
-<form onclick="addpartbtn()" id="addbutton" class="input-group" >
+<form id="addpartbtn" class="input-group" style="position: absolute; top: 80px; left: 7px;" >
   <button type="submit" class="submit-btn">Add Part</button>
 </form>
 <div class="add-box">
-  <h2>Add Part</h2>
+  <img id="addqrscanner" style="cursor: pointer; width: 46px; height: 46px;" src="img/qr.png" />
+  <h2 style=" width: 150px; position: absolute; left: 70px; top: 10px;">Add Part</h2>
   <form name="addpart" class="add-group" method="POST">
     <input type="text" name="pname" class="input-field" placeholder="Part Name" required>
     <br><br />
@@ -22,12 +27,24 @@
       <option value="Headsets">Headsets</option>
       <option value="Cranks">Cranks</option>
     </select>
-    <br /><br />
+    <br><br />
+    <input type="text" name="qr" id="qr" class="input-field" placeholder="Click QR to Scan" required>
+    <br />
     <textarea class="pdetails" name='pdescription'placeholder="Part Description" required></textarea>
     <br><br>
     <button type="submit" name="addpart" class="submit-btn">Add Part</button>
   </form>
+
+  <!--QR CODE SCANNER-->
+  <div id="qrbox">
+    <video id="preview" style="position: absolute; top: 70px; left: 42px; width: 300px; height: 200px;"></video>
+    <br />
+    <section class="cameras"></section>
+
+
+  </div>
 </div>
+
 
 
 
@@ -53,8 +70,8 @@
           <td><?php echo htmlspecialchars($part['pcategory']);?></td>
           <td><?php echo htmlspecialchars($part['ptime']);?></td>
           <td>
-            <!GETs id from parts>
-            <a href="details.php?id=<?php echo $part['id']?>">More Info</a>
+            <!--GETs id from parts **UPDATED TO QR-->
+            <a href="details.php?qr=<?php echo $part['qr']?>">More Info</a>
           </td>
         </tr>
       </tbody>

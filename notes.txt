@@ -19,3 +19,6 @@ add form as pop up with opacity with javascript
 **add infinite scrolling on master page
 **need to be able to add and remove categories
 **needs smoother navigation
+
+
+******** change all $id to $qr, search field, get details to work properly********

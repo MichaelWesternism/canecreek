@@ -1,13 +1,13 @@
 <?php
   include('templates/header.php');
-  if(!isset($_GET['id'])){
+  if(!isset($_GET['qr'])){
     header('Location: master.php');
   }
 
 ?>
 
 <!--ADD COMMENT FORM-->
-<!-- <form onclick="archivecommentbtn()" id="addbutton" class="input-group" >
+<!-- <form onclick="addbtn()" id="addbutton" class="input-group" >
   <button type="submit" class="submit-btn">Add Comment</button>
 </form>
 <div class="add-box">
@@ -24,7 +24,7 @@
 
 
 <div id="qrcode">
-  <img  src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chl=localhost/canecreek/archivedetails.php?id=<?php echo $_GET['id']?>" />
+  <img  src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chl=<?php echo $_GET['qr']?>" />
 </div>
 
 

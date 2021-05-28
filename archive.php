@@ -25,7 +25,7 @@
           <td><?php echo htmlspecialchars($archives['ptime']);?></td>
           <td>
             <!GETs id from parts>
-            <a href="archivedetails.php?id=<?php echo $archives['id']?>">More Info</a>
+            <a href="archivedetails.php?qr=<?php echo $archives['qr']?>">More Info</a>
           </td>
         </tr>
       </tbody>
