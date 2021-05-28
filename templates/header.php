@@ -110,11 +110,8 @@
     //START comment retrieval
     //grabs rows based off part id
     $sql = "SELECT * FROM comments WHERE pid = $qr";
-
     $result = mysqli_query($conn, $sql);
-
     $comments = mysqli_fetch_all($result);
-
     mysqli_free_result($result);
 
 
@@ -193,18 +190,41 @@ if(isset($_POST['editpart'])){
   <head>
     <title></title>
     <link rel="stylesheet" href="css/master.css">
-  <header id="header">
-    <h1>
-      Welcome
-      <?php echo htmlspecialchars($_SESSION['userid']) ?>
-    </h1>
+    <header id="header">
+      <h1>
+        Welcome
+        <?php echo htmlspecialchars($_SESSION['userid']) ?>
+      </h1>
 
-    <a href="master.php">
-      <img id="logo" src="img/logo.png">
-    </a>
+      <a href="master.php">
+        <img id="logo" src="img/logo.png">
+      </a>
+      <img src="img/hamburger.png" id="nav" style=" background-color: red; cursor: pointer; height: 30px; width: 30px; position: absolute; top: 21px; right: 20px;" />
+      <div class="navdrop">
+        <form action="master.php">
+        <button type="submit">Master Table</button>
+        </form>
+        <hr>
+        <form id="qrsearch">
+        <button type="submit">QR Search</button>
+        </form>
+        <hr />
+        <form action="archive.php">
+        <button type="submit">Archive Table</button>
+        </form>
+        <hr />
+        <form method="POST">
+          <button name="logout">Log Out</button>
+        </form>
+      </div>
 
-    <form id="logoutbutton" class="input-group" method="POST">
-      <button type="submit" name="logout" class="submit-btn">Log Out</button>
-    </form>
-  </header>
+      <!--QR CODE SCANNER (for search) code in forms.js-->
+      <div id="qrsearchbox">
+        <video id="preview" style="width: 300px; height: 200px;"></video>
+        <br />
+        <section class="cameras"></section>
+      </div>
+
+    </header>
+  </head>
   <body class="background">

@@ -7,7 +7,7 @@
 ?>
 
 <!--EDIT/ARCHIVE PART FORM-->
-<form onclick="editbutton()" id="editbutton" class="input-group" >
+<form id="editbutton" class="input-group" style="position: absolute; top: 130px; left: 7px;">
   <button type="submit" class="submit-btn">Edit/Archive</button>
 </form>
 <div class="edit-box">
@@ -35,12 +35,12 @@
 
 
 <!--ADD COMMENT FORM-->
-<form onclick="addbtn()" class="input-group" style="position: absolute; top: 80px; left: 7px;">
+<form id="commentbutton" class="input-group" style="position: absolute; top: 80px; left: 7px;">
   <button type="submit" class="submit-btn">Add Comment</button>
 </form>
 <div class="add-box">
   <h2>Add Comment</h2>
-  <form id="login" name="addcomment" class="add-group" method="POST">
+  <form name="addcomment" class="add-group" method="POST" style="left: 50px;">
     <textarea class="comments" name='riderlog' placeholder="Part Comment" required></textarea>
     <br><br>
     <button type="submit" name="addcomment" class="submit-btn">Add Comment</button>

@@ -12,6 +12,8 @@ CREATE TABLE `archive` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO archive VALUES("19","666","Admin","x675309t 27","Rainbow Headset","Shocks","666","2021-05-28 00:04:15");
+INSERT INTO archive VALUES("999","999","admin","asdf34","stff","morestuff","stsdfsefr","2021-05-28 00:02:16");
 
 
 
@@ -24,7 +26,7 @@ CREATE TABLE `comments` (
   `riderlog` varchar(255) NOT NULL,
   `rldate` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO comments VALUES("1","4","Heimdall","it goes ring adingaling a ling maling faling and annoys all my neighbors. 10/10 would buy again.","2021-05-20 15:16:56");
 INSERT INTO comments VALUES("2","4","Maddy","yo maamamasdflkasdfaihsfsaoidhfsadfsdafsadf","2021-05-20 15:29:23");
@@ -56,6 +58,17 @@ INSERT INTO comments VALUES("25","666","Admin","I can see my dead grandmother wi
 INSERT INTO comments VALUES("26","666","Maddy","this is a sexy comment","2021-05-27 21:39:28");
 INSERT INTO comments VALUES("27","333","Admin","comment test 333","2021-05-27 23:53:30");
 INSERT INTO comments VALUES("28","333","Admin","comment test 333 2","2021-05-27 23:53:38");
+INSERT INTO comments VALUES("29","333","Admin","commment balahblabh","2021-05-28 11:36:07");
+INSERT INTO comments VALUES("30","111","Maddy","blahblabhablh","2021-05-28 15:31:14");
+INSERT INTO comments VALUES("31","111","Maddy","sdfgr
+sf
+
+eswffews
+ews
+","2021-05-28 15:31:37");
+INSERT INTO comments VALUES("32","111","Maddy","ewsrsfrffffffffffffffffffffffffffffffffffffffffffffffffffffbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","2021-05-28 15:31:53");
+INSERT INTO comments VALUES("33","111","Maddy","bbbbbbbbbbbb b  b ab   ba as s sb sb sb sb sbsb sb s bsb sb s bbsb bs bsb s bsb sb s b sb     bsb bsb sbsb sbsbs bsb sb sb sb sb sbs bsb sb ","2021-05-28 15:32:19");
+INSERT INTO comments VALUES("34","111","Maddy","sgserg","2021-05-28 15:32:23");
 
 
 
@@ -86,12 +99,13 @@ CREATE TABLE `parts` (
   `pdescription` varchar(255) NOT NULL,
   `ptime` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO parts VALUES("3","111","Maddy","asdflkj sdf","erect penis d sdf","Shocks","big hard erect rooster sdfsdf","2021-05-19 18:14:31");
-INSERT INTO parts VALUES("19","666","Admin","x675309t 27","Rainbow Headset","Shocks","666","2021-05-27 23:45:31");
+INSERT INTO parts VALUES("3","111","Maddy","asdflkj sdf","erect penis d sdf is more erect now","Shocks","big hard erect rooster sdfsdf","2021-05-19 18:14:31");
 INSERT INTO parts VALUES("20","333","Admin","x675309t 27","Rainbow Headset 27","Shocks","333","2021-05-27 23:52:14");
 INSERT INTO parts VALUES("21","aaa","Admin","x675309t 27","Rainbow Headset","Shocks","aaa","2021-05-27 23:52:25");
+INSERT INTO parts VALUES("22","666","Admin","x675309t 27","Rainbow Headset","Shocks","asdfsa","2021-05-28 12:35:49");
+INSERT INTO parts VALUES("23","tymca3","Admin","asdf","erect penis d","Shocks","stuff","2021-05-28 14:16:06");
 
 
 
