@@ -30,13 +30,6 @@
     <br><br>
     <button type="submit" name="addpart" class="submit-btn">Add Part</button>
   </form>
-
-  <!--QR CODE SCANNER code in forms.js-->
-  <div id="qrbox">
-    <video id="preview" style="position: absolute; top: 70px; left: 42px; width: 300px; height: 200px;"></video>
-    <br />
-    <section class="cameras"></section>
-  </div>
 </div>
 
 

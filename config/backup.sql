@@ -12,8 +12,7 @@ CREATE TABLE `archive` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO archive VALUES("19","666","Admin","x675309t 27","Rainbow Headset","Shocks","666","2021-05-28 00:04:15");
-INSERT INTO archive VALUES("999","999","admin","asdf34","stff","morestuff","stsdfsefr","2021-05-28 00:02:16");
+INSERT INTO archive VALUES("30","3456","Admin","asdfasdf","Testing Archive","Shocks","This is an archived part","2021-05-29 12:45:39");
 
 
 
@@ -21,54 +20,24 @@ DROP TABLE comments;
 
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL,
+  `pid` varchar(255) NOT NULL,
   `userid` varchar(255) NOT NULL,
   `riderlog` varchar(255) NOT NULL,
   `rldate` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO comments VALUES("1","4","Heimdall","it goes ring adingaling a ling maling faling and annoys all my neighbors. 10/10 would buy again.","2021-05-20 15:16:56");
-INSERT INTO comments VALUES("2","4","Maddy","yo maamamasdflkasdfaihsfsaoidhfsadfsdafsadf","2021-05-20 15:29:23");
-INSERT INTO comments VALUES("3","2","Admin","dasdfkjashfsaefasdfasdf","2021-05-20 16:37:26");
-INSERT INTO comments VALUES("4","4","Lisa","asdabsgradgafsda fesf  sadf asdfsdf","2021-05-20 16:37:26");
-INSERT INTO comments VALUES("5","4","Admin","This bell is the best bell of all bells and I just want to lube it up and shove it up my tight asshole","2021-05-21 13:17:24");
-INSERT INTO comments VALUES("6","4","Admin","checking redirect
-","2021-05-21 13:19:02");
-INSERT INTO comments VALUES("7","4","Admin","checking redirect
-","2021-05-21 13:19:37");
-INSERT INTO comments VALUES("8","4","Admin","checking redirect
-","2021-05-21 13:20:31");
-INSERT INTO comments VALUES("9","3","Maddy","Sometimes I like to put kittens in blenders","2021-05-21 13:26:16");
-INSERT INTO comments VALUES("10","7","Maddy","this crank is the most fantastic crank of all cranks","2021-05-21 13:47:45");
-INSERT INTO comments VALUES("11","8","Admin","I love this large black crank. 10/10 would sit again","2021-05-21 14:45:17");
-INSERT INTO comments VALUES("12","6","Admin","Sat on seatpost, would recommend, seatpost felt amazing, orgasmic, while sitting on. ill take three","2021-05-24 10:05:01");
-INSERT INTO comments VALUES("13","9","Admin","comment database backup test","2021-05-24 10:55:23");
-INSERT INTO comments VALUES("14","9","Admin","COMMENT BACKUP TEST","2021-05-24 10:59:31");
-INSERT INTO comments VALUES("15","10","Admin","comment backup test","2021-05-24 10:59:45");
-INSERT INTO comments VALUES("16","1","Admin","backup test","2021-05-24 11:01:43");
-INSERT INTO comments VALUES("17","1","Admin","backup test","2021-05-24 11:01:56");
-INSERT INTO comments VALUES("18","9","Admin","echo $_SERVER[\'SERVER_NAME\']","2021-05-24 13:28:07");
-INSERT INTO comments VALUES("21","5","Admin","This one needs a comment","2021-05-24 13:43:09");
-INSERT INTO comments VALUES("22","1","Maddy","javascript test","2021-05-24 16:48:50");
-INSERT INTO comments VALUES("23","12","Maddy","test comment","2021-05-24 16:51:23");
-INSERT INTO comments VALUES("24","6","Maddy","comment
-","2021-05-24 18:36:08");
-INSERT INTO comments VALUES("25","666","Admin","I can see my dead grandmother with these headphones","2021-05-27 21:33:22");
-INSERT INTO comments VALUES("26","666","Maddy","this is a sexy comment","2021-05-27 21:39:28");
-INSERT INTO comments VALUES("27","333","Admin","comment test 333","2021-05-27 23:53:30");
-INSERT INTO comments VALUES("28","333","Admin","comment test 333 2","2021-05-27 23:53:38");
-INSERT INTO comments VALUES("29","333","Admin","commment balahblabh","2021-05-28 11:36:07");
-INSERT INTO comments VALUES("30","111","Maddy","blahblabhablh","2021-05-28 15:31:14");
-INSERT INTO comments VALUES("31","111","Maddy","sdfgr
-sf
-
-eswffews
-ews
-","2021-05-28 15:31:37");
-INSERT INTO comments VALUES("32","111","Maddy","ewsrsfrffffffffffffffffffffffffffffffffffffffffffffffffffffbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","2021-05-28 15:31:53");
-INSERT INTO comments VALUES("33","111","Maddy","bbbbbbbbbbbb b  b ab   ba as s sb sb sb sb sbsb sb s bsb sb s bbsb bs bsb s bsb sb s b sb     bsb bsb sbsb sbsbs bsb sb sb sb sb sbs bsb sb ","2021-05-28 15:32:19");
-INSERT INTO comments VALUES("34","111","Maddy","sgserg","2021-05-28 15:32:23");
+INSERT INTO comments VALUES("35","xycma 206","Admin","This headset is pink and fuzzy","2021-05-29 12:28:52");
+INSERT INTO comments VALUES("36","8675309","Admin","These shocks are super strong","2021-05-29 12:29:16");
+INSERT INTO comments VALUES("37","8675309","Admin","These shocks
+need some 
+extra grease","2021-05-29 12:29:36");
+INSERT INTO comments VALUES("38","tymca3","Admin","These forks are great and all, but hard to eat pasta with","2021-05-29 12:42:17");
+INSERT INTO comments VALUES("39","tymca3","Admin","some extra comment","2021-05-29 12:42:30");
+INSERT INTO comments VALUES("40","tymca3","Admin","third comment","2021-05-29 12:42:37");
+INSERT INTO comments VALUES("41","tymca3","Admin","fourth comment","2021-05-29 12:42:47");
+INSERT INTO comments VALUES("42","any qr code i want","Admin","its shiny","2021-05-29 12:44:27");
+INSERT INTO comments VALUES("43","456","Admin","comments","2021-05-29 12:46:37");
 
 
 
@@ -99,13 +68,13 @@ CREATE TABLE `parts` (
   `pdescription` varchar(255) NOT NULL,
   `ptime` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO parts VALUES("3","111","Maddy","asdflkj sdf","erect penis d sdf is more erect now","Shocks","big hard erect rooster sdfsdf","2021-05-19 18:14:31");
-INSERT INTO parts VALUES("20","333","Admin","x675309t 27","Rainbow Headset 27","Shocks","333","2021-05-27 23:52:14");
-INSERT INTO parts VALUES("21","aaa","Admin","x675309t 27","Rainbow Headset","Shocks","aaa","2021-05-27 23:52:25");
-INSERT INTO parts VALUES("22","666","Admin","x675309t 27","Rainbow Headset","Shocks","asdfsa","2021-05-28 12:35:49");
-INSERT INTO parts VALUES("23","tymca3","Admin","asdf","erect penis d","Shocks","stuff","2021-05-28 14:16:06");
+INSERT INTO parts VALUES("24","xycma 6","Admin","XYZ#$%","Pink Headset","Headsets","This headset is pink","2021-05-29 12:27:35");
+INSERT INTO parts VALUES("25","8675309","Admin","TYU#34%","Beefy Shocks","Shocks","Extra wide shocks","2021-05-29 12:28:41");
+INSERT INTO parts VALUES("26","tymca3","Admin","TYA6%#$","Silver Forks","Forks","This is a description ","2021-05-29 12:30:36");
+INSERT INTO parts VALUES("29","any qr code i want","Admin","ABCDEFG","Aluminum Seat Post","Seat Posts","Seat post made out of aluminum","2021-05-29 12:44:13");
+INSERT INTO parts VALUES("31","456","Admin","34sgdfvg","This is a part","Shocks","This is an archive part with comments","2021-05-29 12:46:30");
 
 
 

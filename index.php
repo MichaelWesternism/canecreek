@@ -1,5 +1,5 @@
 <?php
-  include('login.php');
+  include('php/login.php');
   if (isset($_SESSION[''])){
     if ($_SESSION['userid']){
       header('Location: master.php');

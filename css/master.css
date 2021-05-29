@@ -92,13 +92,12 @@ tbody td {
 }
 #qrbox{
   display: none;
-}
-#qrsearchbox{
-  display: none;
-  position: absolute;
-  width: auto;
+  width: 310px;
   top: 70px;
-  left: 688px;
+  margin: 6% auto;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
 }
 #qrcode {
   border-radius: 50px;

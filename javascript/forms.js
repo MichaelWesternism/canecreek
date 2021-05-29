@@ -2,7 +2,6 @@ let addBox = document.querySelector(".add-box");
 let editBox = document.querySelector(".edit-box")
 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 let qrbox = document.querySelector("#qrbox");
-let qrsearchbox = document.querySelector("#qrsearchbox");
 let qrsearch = document.querySelector("#qrsearch");
 let navdrop = document.querySelector(".navdrop");
 let addpartbtn = document.querySelector("#addpartbtn");
@@ -41,7 +40,6 @@ if(addpartbtn){
           scanner.stop();
         }else{
           qrbox.style.display= "block";
-          console.log ("maddy sucks");
           scanner.addListener('scan', function (content) {
             console.log(content);
             qrbox.style.display= "none";
@@ -70,15 +68,13 @@ if(addpartbtn){
 if(qrsearch){
   qrsearch.addEventListener("click", function(){
     event.preventDefault();
-    if (qrsearchbox.style.display === "block"){
-      qrsearchbox.style.display= "none";
+    if (qrbox.style.display === "block"){
+      qrbox.style.display= "none";
       scanner.stop();
     }else{
-      qrsearchbox.style.display= "block";
+      qrbox.style.display= "block";
       scanner.addListener('scan', function (content) {
-        console.log(content);
         window.location.href = 'details.php?qr=' + content;
-        //qrsearchbox.style.display= "none";
         scanner.stop();
       });
       Instascan.Camera.getCameras().then(function (cameras) {
@@ -88,12 +84,6 @@ if(qrsearch){
           console.error('No cameras found.');
         }
       })
-      // .catch(function (e) {
-      //   console.error(e);
-      // });
-      // scanner.addListener('scan', function(c){
-      // document.getElementById('qr').value=c;
-      // })
     }
   })
 }
