@@ -18,32 +18,18 @@
 
 
   //START for master.php
-  //query for parts table
   $sql = 'SELECT * FROM parts';
-
-  //get result
   $result = mysqli_query($conn, $sql);
-
-  //store result in array
   $parts = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-  //clears result
   mysqli_free_result($result);
   //END for master.php
 
 
 
   //START for archive.php
-  //query for archive table
   $sql = 'SELECT * FROM archive';
-
-  //get result
   $result = mysqli_query($conn, $sql);
-
-  //store result in array
   $archive = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-  //clears result
   mysqli_free_result($result);
   //END for archive.php
 
@@ -170,9 +156,8 @@ if(isset($_POST['editpart'])){
   //save to db and check
   if(mysqli_query($conn, $sql)){
     //success
-    //BACKS UP DATABASE
+    //BACKS UP DATABASE (needs to be deleted)
     include('templates/sqlbackup.php');
-    //header redirects to details page
     header('Location: details.php?qr='. $qr);
   }else{
     //errors
